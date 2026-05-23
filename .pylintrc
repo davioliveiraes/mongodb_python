@@ -7,6 +7,11 @@ disable=
       W0703, # Catching too general exception Exception
       CO209, # Consider-using-f-string
       E0015, # unrecognized-option
+      C0415, # Consider-using-from-import
+      C0103, # Invalid-name
+      W0012, # Invalid-name
+      C0301, # Line-too-long
+      C0209, # Consider-using-f-string
 
 # Analyse import fallback blocks. This can be used to support both Python 2 and
 # 3 compatible code, which means that the block might have code that exists
@@ -76,7 +81,7 @@ ignored-modules=
 
 # Python code to execute, usually for sys.path manipulation such as
 # pygtk.require().
-#init-hook=
+init-hook="import sys; sys.path.insert(0, './')"
 
 # Use multiple processes to speed up Pylint. Specifying 0 will auto-detect the
 # number of processors available to use, and will cap the count on Windows to

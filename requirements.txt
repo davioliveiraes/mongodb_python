@@ -1,14 +1,5 @@
-astroid==4.0.4
-dill==0.4.1
-dnspython==2.8.0
 iniconfig==2.3.0
-isort==8.0.1
-mccabe==0.7.0
 packaging==26.2
-platformdirs==4.9.6
 pluggy==1.6.0
 Pygments==2.20.0
-pylint==4.0.5
-pymongo==4.17.0
 pytest==9.0.3
-tomlkit==0.15.0
