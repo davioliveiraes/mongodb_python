@@ -92,9 +92,24 @@ def test_select_many_with_or_filter():
         pprint(doc)
         print("-" * 40)
 
+@pytest.mark.skip(reason="interacao com banco")
 def test_select_by_object_id():
     orders_repository = OrdersRepository(conn)
     response = orders_repository.select_by_object_id("6a0510f70fd15fa1470e1bce")
     print()
     pprint(response)
     print("-" * 40)
+
+@pytest.mark.skip(reason="interacao com banco")
+def test_edit_registry():
+    orders_repository = OrdersRepository(conn)
+    orders_repository.edit_registry()
+
+@pytest.mark.skip(reason="interacao com banco")
+def test_edit_many_registries():
+    order_repository = OrdersRepository(conn)
+    order_repository.edit_many_registries()
+
+def test_edit_registry_with_increment():
+    order_repository = OrdersRepository(conn)
+    order_repository.edit_registry_with_increment()
